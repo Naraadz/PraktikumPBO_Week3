@@ -1,26 +1,40 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World");
 
-        double myDouble = 5.0 / 2.0;
-        System.out.println(myDouble);
-        int b = (int) 2.9 + (int) 1.8;
-        System.out.println(b);
+    Mahasiswa mhs1 = new Mahasiswa();
+        mhs1.nama = "Rey";
+        mhs1.nim = "12345";
+        mhs1.jurusan = "Teknik Kimia";
+        mhs1.ipk = 3.0;
+        mhs1.belajar();
 
-        System.out.println((double) 10 / 4);
-        System.out.println(10 / 4.0);
-        System.out.println(10 % 4); // modulus
+        Mahasiswa.kuliah();
+        System.out.println("Angkatan: " + Mahasiswa.angkatan);
 
-        int x = 1;
-        System.out.println(x++);
-        // System.out.println(x)
-        System.out.println(++x); // jika x++ di balik
-        System.out.println(x++);
+        System.out.println(mhs1.nama);
+        System.out.println(mhs1.nim);
+        System.out.println(mhs1.jurusan);
 
-        int y =  10;
-        y += 3; // 
-        System.out.println(y);
+        mhs1.nama = "Budi";
+        System.out.println(mhs1.nama);
 
-    }
+        mhs1.belajar();
+        mhs1.belajar("Rin");
+       
+        System.out.println("\n=== Informasi Mahasiswa 1 ===");
+        mhs1.tampilkanInfo();
+        System.out.println("Lulus: " + mhs1.cekLulus());
 
+        Mahasiswa mhs2 = new Mahasiswa();
+        mhs2.nama = "Len";
+        mhs2.nim = "65432";
+        mhs2.jurusan = "Teknik Mesin";
+        mhs2.ipk = 2.7;
+        mhs2.belajar(); 
+
+        System.out.println("\n=== Informasi Mahasiswa 2 ===");
+        mhs2.tampilkanInfo();
+        System.out.println("Lulus: " + mhs2.cekLulus());
+    } 
 }
+
